@@ -12,14 +12,13 @@ from torchvision import datasets, transforms
 from torch.autograd import Variable
 
 from wideresnet import *
-from resnet import *
-from snart import lrat_loss
+
 import numpy as np
 import time
 
 os.environ["CUDA_VISIBLE_DEVICES"]="0"
 
-parser = argparse.ArgumentParser(description='Loss Ratio Adversarial Training')
+parser = argparse.ArgumentParser(description='SDI Regularization')
 parser.add_argument('--batch-size', type=int, default=128, metavar='N',
                     help='input batch size for training (default: 128)')
 parser.add_argument('--test-batch-size', type=int, default=128, metavar='N',
