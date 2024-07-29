@@ -12,7 +12,7 @@ from torchvision import datasets, transforms
 from torch.autograd import Variable
 
 from wideresnet import *
-
+from at_sdi  import *
 import numpy as np
 import time
 
@@ -99,7 +99,7 @@ def train(args, model, device, train_loader, optimizer, epoch):
                            x_natural=data,
                            y=target,
                            optimizer=optimizer,
-                           training_version=args.training_version,
+                           #training_version=args.training_version,
                            step_size=args.step_size,
                            epsilon=args.epsilon,
                            perturb_steps=args.num_steps,
